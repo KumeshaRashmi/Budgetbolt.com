@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equip="X-UA-Compatible" content ="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance tracker dashboard using html css javascrit</title>
+    <!----meta http-equiv="refresh" content="2"------->
+    <!--Material CDN-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--STYLESHEET-->
+    <link rel ="stylesheet" href ="./settings.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src = "./images/logo7.png">
+                    <a href="#" id="logo-link">
+                        <img src ="./images/logo10.png" alt="BudgetBolt" id="logo-img">
+                    </a>
+                </div>
+                <div class="close"id="close-btn">
+                    <span class="material-icons-sharp"> close</span>
+                </div>
+            </div>
+            <div class ="sidebar">
+                <!-- Add these links in the <aside> section of your dashboard.html -->
+            <a href="home.html">
+    <span class="material-icons-sharp">home</span>
+    <h3>Home</h3>
+</a>
+<a href="dashboard.html" >
+    <span class="material-icons-sharp">grid_view</span>
+    <h3>Dashboard</h3>
+</a>
+<a href="profile.html" >
+    <span class="material-icons-sharp">account_circle</span>
+    <h3>Profile</h3>
+</a>
+<a href="report.html">
+    <span class="material-icons-sharp">description</span>
+    <h3>Reports</h3>
+</a>
+<a href="aboutUs.html" >
+    <span class="material-icons-sharp">contact_page</span>
+    <h3>About us</h3>
+</a>
+<a href="settings.html" class="active" >
+    <span class="material-icons-sharp">settings</span>
+    <h3>Settings</h3>
+</a>
+<a href="home.html">
+    <span class="material-icons-sharp">logout</span>
+    <h3>Logout</h3>
+</a>
+
+    </div>
+        </aside>
+        <!-------------------------END OF ASIDE---------------------------------->
+       <main>
+        <h1>Personal Info</h1>
+        <div class="profile-form">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" placeholder="Enter your phone number">
+            </div>
+            <button id="saveBtn">Save</button>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>About Us</h2>
+                    <a href="login.html"><img src="./images/logo7.png" alt="Your Website Logo"></a>
+                    <a href="login.html"><img src="./images/logo10.png" alt="Your Website Logo2"></a>
+                    <p>Welcome to Personal Finance Tracker! Simplifying financial management, clear tutorials, and informed decisions. Agree to terms. Begin your journey to financial wellness today!</p>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contact Us</h2>
+                    <p>Email: budgetbolt@gmail.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+                <div class="footer-section social">
+                    <h2>Follow Us</h2>
+                    <p>Connect with us on social media:</p>
+                    <ul>
+                        <li><a href="#">Facebook   <i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#">Twitter    <i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#">Instagram  <i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#">Linkedin   <i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section resources">
+                    <h2>Additional Resources</h2>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Finance Tracker. All rights reserved.
+            </div>
+        </footer>
+       </main>
+       <!-------------------------END OF MAIN------------------------------>
+
+       <div class="right">
+        <div class="top">
+            <button id="menu-btn">
+                <span class="material-icons-sharp">menu</span>
+            </button>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp">dark_mode</span>
+            </div>
+            <div class="profile">
+                <div class="info">
+                    <p>Hey,<b>Mery</b></p>
+                    <small class="text-muted">Admin</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="./images/profile7.jpg">
+                </div>
+            </div>
+        </div>
+        <!-----END OF TOP-------------->
+        <div class="account-details">
+            <h2>Personal Account Details</h2>
+            <label for="account-type">Account Type:</label>
+            <input type="text" id="account-type" placeholder="Enter account type">
+
+            <label for="account-name">Account Name:</label>
+            <input type="text" id="account-name" placeholder="Enter account name">
+
+            <label for="account-number">Account Number:</label>
+            <input type="text" id="account-number" placeholder="Enter account number">
+
+            <label for="account-balance">Account Balance:</label>
+            <input type="text" id="account-balance" placeholder="Enter account balance">
+    
+            <button id="add-account-btn" onclick="addAccount()">Add Account</button>
+        </div>
+       </div>
+       <script src="./settings.js"></script>
+    </div>
+
+    
+</body>
+</html>

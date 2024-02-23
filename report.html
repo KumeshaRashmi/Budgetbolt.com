@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance tracker dashboard using HTML CSS JavaScript</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./report.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src = "./images/logo7.png">
+                    <a href="#" id="logo-link">
+                        <img src ="./images/logo10.png" alt="BudgetBolt" id="logo-img">
+                    </a>
+                </div>
+                <div class="close"id="close-btn">
+                    <span class="material-icons-sharp"> close</span>
+                </div>
+            </div>
+            <div class ="sidebar">
+                <!-- Add these links in the <aside> section of your dashboard.html -->
+            <a href="home.html">
+    <span class="material-icons-sharp">home</span>
+    <h3>Home</h3>
+</a>
+<a href="dashboard.html" >
+    <span class="material-icons-sharp">grid_view</span>
+    <h3>Dashboard</h3>
+</a>
+<a href="profile.html">
+    <span class="material-icons-sharp">account_circle</span>
+    <h3>Profile</h3>
+</a>
+<a href="report.html" class="active">
+    <span class="material-icons-sharp">description</span>
+    <h3>Reports</h3>
+</a>
+<a href="aboutUs.html" >
+    <span class="material-icons-sharp">contact_page</span>
+    <h3>About us</h3>
+</a>
+<a href="settings.html">
+    <span class="material-icons-sharp">settings</span>
+    <h3>Settings</h3>
+</a>
+<a href="home.html">
+    <span class="material-icons-sharp">logout</span>
+    <h3>Logout</h3>
+</a>
+
+
+            </div>
+        </aside>
+        <!-------------------------END OF ASIDE---------------------------------->
+       <main>
+        <h1>Reports</h1>
+        <div class="date">
+            <input type ="date">
+        </div>
+
+        <div class="chart-container">
+            <h1>Income Expenses Chart</h1>
+            <canvas id="incomeExpensesChart" width="400" height="300"></canvas>
+            <h1>Financial Summary Chart</h1>
+            <canvas id="financialSummaryChart" width="400" height="400"></canvas>
+          </div>
+
+          <footer>
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>About Us</h2>
+                    <a href="login.html"><img src="./images/logo7.png" alt="Your Website Logo"></a>
+                    <a href="login.html"><img src="./images/logo10.png" alt="Your Website Logo2"></a>
+                    <p>Welcome to Personal Finance Tracker! Simplifying financial management, clear tutorials, and informed decisions. Agree to terms. Begin your journey to financial wellness today!</p>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contact Us</h2>
+                    <p>Email: budgetbolt@gmail.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+                <div class="footer-section social">
+                    <h2>Follow Us</h2>
+                    <p>Connect with us on social media:</p>
+                    <ul>
+                        <li><a href="#">Facebook   <i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#">Twitter    <i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#">Instagram  <i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#">Linkedin   <i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section resources">
+                    <h2>Additional Resources</h2>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Finance Tracker. All rights reserved.
+            </div>
+        </footer>
+
+       </main>
+       <!-------------------------END OF MAIN------------------------------>
+
+       <div class="right">
+        <div class="top">
+            <button id="menu-btn">
+                <span class="material-icons-sharp">menu</span>
+            </button>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp">dark_mode</span>
+            </div>
+            <div class="profile">
+                <div class="info">
+                    <p>Hey,<b>Mery</b></p>
+                    <small class="text-muted">Admin</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="./images/profile7.jpg">
+                </div>
+            </div>
+        </div>
+        <!-----END OF TOP-------------->
+        <div id="savings-rate-container">
+            <h2>Savings Rate Calculator</h2>
+            <label for="income">Total Income:</label>
+            <input type="number" id="income" placeholder="Enter your total income">
+          
+            <label for="expenses">Total Expenses:</label>
+            <input type="number" id="expenses" placeholder="Enter your total expenses">
+          
+            <button onclick="calculateSavingsRate()">Calculate</button>
+          
+            <div id="result"></div>
+          </div>
+          
+        <!----------------------END OF Saving Rate Calculator-------------->
+        <div class="daily-analytics">
+            <h2>Daily Analytics</h2>
+            <div class="item online">
+                <div class="icon">
+                    <span class="material-icons-sharp">currency_exchange  </span>
+                </div>
+                <div class="right">
+                    <div class="info">
+                        <h3>Daily Income</h3>
+                        <small class="text-muted">Last 24 hours</small>
+                    </div>
+                    <h5 class="success">+39%</h5>
+                    <h3>3898</h3>
+                </div>
+            </div>
+            <div class="item offline">
+                <div class="icon">
+                    <span class="material-icons-sharp">payments</span>
+                </div>
+                <div class="right">
+                    <div class="info">
+                        <h3>Daily Expenses</h3>
+                        <small class="text-muted">Last 24 hours</small>
+                    </div>
+                    <h5 class="danger">-17%</h5>
+                    <h3>1100</h3>
+                </div>
+            </div>
+            <div class="item customers">
+                <div class="icon">
+                    <span class="material-icons-sharp">account_balance_wallet</span>
+                </div>
+                <div class="right">
+                    <div class="info">
+                        <h3>Daily Budget</h3>
+                        <small class="text-muted">Last 24 hours</small>
+                    </div>
+                    <h5 class="success">+25%</h5>
+                    <h3>890</h3>
+                </div>
+            </div>
+       </div>
+
+       <!-----End of Daily Analytic--------------->
+       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="./report.js"></script>
+    </div>
+</body>
+</html>

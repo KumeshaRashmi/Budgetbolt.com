@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equip="X-UA-Compatible" content ="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance tracker dashboard using html css javascrit</title>
+    <!----meta http-equiv="refresh" content="2"------->
+    <!--Material CDN-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--STYLESHEET-->
+    <link rel ="stylesheet" href ="./profile.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src = "./images/logo7.png">
+                    <a href="#" id="logo-link">
+                        <img src ="./images/logo10.png" alt="BudgetBolt" id="logo-img">
+                    </a>
+                </div>
+                <div class="close"id="close-btn">
+                    <span class="material-icons-sharp"> close</span>
+                </div>
+            </div>
+            <div class ="sidebar">
+                <!-- Add these links in the <aside> section of your dashboard.html -->
+            <a href="home.html">
+    <span class="material-icons-sharp">home</span>
+    <h3>Home</h3>
+</a>
+<a href="dashboard.html" >
+    <span class="material-icons-sharp">grid_view</span>
+    <h3>Dashboard</h3>
+</a>
+<a href="profile.html" class="active">
+    <span class="material-icons-sharp">account_circle</span>
+    <h3>Profile</h3>
+</a>
+<a href="report.html">
+    <span class="material-icons-sharp">description</span>
+    <h3>Reports</h3>
+</a>
+<a href="aboutUs.html" >
+    <span class="material-icons-sharp">contact_page</span>
+    <h3>About us</h3>
+</a>
+<a href="settings.html">
+    <span class="material-icons-sharp">settings</span>
+    <h3>Settings</h3>
+</a>
+<a href="home.html">
+    <span class="material-icons-sharp">logout</span>
+    <h3>Logout</h3>
+</a>
+
+    </div>
+        </aside>
+        <!-------------------------END OF ASIDE---------------------------------->
+       <main>
+        <div class="profile-details">
+            <h1><b>Profile Details</b></h1>
+            <div class="box">
+                <div class="content">
+                    <img src="./images/profile7.jpg">
+                </div>
+            </div>
+            
+            <ul>
+                <li><strong>Full Name:</strong> <span id="savedFullName">Mery Jane</span></li>
+                <li><strong>Birthday:</strong> <span id="savedBirthday">03/14/2000</span></li>
+                <li><strong>Gender:</strong> <span id="savedGender">Female</span></li>
+                <li><strong>Address:</Address>:</strong> <span id="savedGender">No.6 ,2nd Lane,Galle</span></li>
+                <li><strong>Email:</strong> <span id="savedEmail">Jane@gmail.com</span></li>
+                <li><strong>Password:</strong> <span id="savedPassword">2244567@K</span> <button onclick="changePassword()">Change Password</button></li>
+                <li><strong>Phone Number:</strong> <span id="savedPhoneNumber">0710890878</span> <button onclick="changePhoneNumber()">Change Phone Number</button></li>
+            </ul>
+        </div>
+
+       
+    </main>
+ 
+       <!-------------------------END OF MAIN------------------------------>
+
+       <div class="right">
+        <div class="top">
+            <button id="menu-btn">
+                <span class="material-icons-sharp">menu</span>
+            </button>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp">dark_mode</span>
+            </div>
+            <div class="profile">
+                <div class="info">
+                    <p>Hey,<b>Mery</b></p>
+                    <small class="text-muted">Admin</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="./images/profile7.jpg">
+                </div>
+            </div>
+        </div>
+        <!-----END OF TOP-------------->
+        <h2><b>Account Details</b></h2>
+        <div class="Account-details">
+            
+        <ul>
+            <li><strong>Account Type:</strong> <span id="savedAccountType">Peoples Bank</span></li>
+            <li><strong>Account Name:</strong> <span id="savedAccountName">Mery Jane</span></li>
+            <li><strong>Account Number:</strong> <span id="savedAccountNumber">2000075469</span></li>
+            <li><strong>Account Balance:</Address>:</strong> <span id="savedAccountBalance">RS.10,000</span></li>
+        </ul>
+
+        </div>
+        <!----------------------Account Details-------------->
+        
+       </div>
+       <script src="./profile.js"></script>
+    </div>
+
+    
+</body>
+</html>
